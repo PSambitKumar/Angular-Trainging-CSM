@@ -1,0 +1,14 @@
+<body>
+<div>
+  <h3>Department Data</h3>
+  <div *ngFor="let department of departmentData">
+    <ng-container *ngIf="department.id == deptId">
+      <div>ID : {{department.id}}</div>
+      <div>NAME : {{department.name}}</div>
+      <div>YEAR : {{department.year}}</div>
+      <div>DURATION : {{department.duration}}</div>
+    </ng-container>
+  </div>
+</div>
+<button routerLink="/seventh/departmentList" routerLinkActive="active" class="btn btn-warning">Back</button>
+</body>

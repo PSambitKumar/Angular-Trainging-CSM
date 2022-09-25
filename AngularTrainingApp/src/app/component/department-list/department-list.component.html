@@ -2,7 +2,7 @@
 <h3>Department List</h3>
 <div *ngFor="let department of departments">
   <div>ID : {{department.id}}</div>
-  <div>DEPARTMENT NAME : {{department.name}}</div>
+  <div >NAME : <a href="javascript:void(0)" (click)="getDepartment(department.id)">{{department.name}}</a></div>
   <div>------------------------</div>
 </div>
 <button routerLink="/seventh" routerLinkActive="active" class="btn btn-warning">Back</button>

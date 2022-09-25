@@ -1,8 +1,8 @@
 <body>
-<h3>Department List</h3>
-<div *ngFor="let student of studentList">
+<h3>Student List</h3>
+<div *ngFor="let student of studentList,">
   <div>ID : {{student.id}}</div>
-  <div>NAME : {{student.name}}</div>
+  <div >NAME : <a href="javascript:void(0)" (click)="getStudentId(student.id)">{{student.name}}</a></div>
   <div>AGE : {{student.age}}</div>
   <div>------------------------</div>
 </div>

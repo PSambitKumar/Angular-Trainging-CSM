@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +19,10 @@ import { ErrorComponent } from './component/error/error.component';
 import { EmployeeListComponent } from './component/employee-list/employee-list.component';
 import { DepartmentListComponent } from './component/department-list/department-list.component';
 import { StudentListComponent } from './component/student-list/student-list.component';
+import { EmployeeDetailsComponent } from './component/employee-details/employee-details.component';
+import { DepartmentDataComponent } from './component/department-data/department-data.component';
+import {HttpClientModule} from "@angular/common/http";
+import { ReactiveFormComponent } from './component/reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -37,11 +41,16 @@ import { StudentListComponent } from './component/student-list/student-list.comp
     EmployeeListComponent,
     DepartmentListComponent,
     StudentListComponent,
+    EmployeeDetailsComponent,
+    DepartmentDataComponent,
+    ReactiveFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [MainService],
   bootstrap: [AppComponent]
