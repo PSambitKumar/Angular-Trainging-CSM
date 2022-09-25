@@ -1,2 +1,9 @@
+<body>
 <h3>Login</h3>
-<app-second></app-second>
+<!--<app-second></app-second>-->
+<div>
+  <input type="text" [(ngModel)]="userName" class="form-control" style="width: 20%;" placeholder="Enter Username"><br>
+  <input type="password" [(ngModel)]="password" class="form-control" style="width: 20%;" placeholder="Enter Password"><br>
+  <button (click)="submit()" class="btn btn-primary">Login</button>&nbsp;<br>
+</div>
+</body>

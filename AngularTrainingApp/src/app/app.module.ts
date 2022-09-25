@@ -15,6 +15,10 @@ import { FifthComponent } from './component/fifth/fifth.component';
 import {SixthComponent} from "./component/sixth/sixth.component";
 import { SeventhComponent } from './component/seventh/seventh.component';
 import { EighthComponent } from './component/eighth/eighth.component';
+import { ErrorComponent } from './component/error/error.component';
+import { EmployeeListComponent } from './component/employee-list/employee-list.component';
+import { DepartmentListComponent } from './component/department-list/department-list.component';
+import { StudentListComponent } from './component/student-list/student-list.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,10 @@ import { EighthComponent } from './component/eighth/eighth.component';
     SixthComponent,
     SeventhComponent,
     EighthComponent,
+    ErrorComponent,
+    EmployeeListComponent,
+    DepartmentListComponent,
+    StudentListComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +44,6 @@ import { EighthComponent } from './component/eighth/eighth.component';
     FormsModule
   ],
   providers: [MainService],
-  bootstrap: [SeventhComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
