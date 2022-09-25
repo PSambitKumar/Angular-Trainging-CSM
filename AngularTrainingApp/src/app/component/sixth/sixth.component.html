@@ -1,0 +1,21 @@
+<body>
+<h3>Sixth Component</h3>
+<label>Data From Sixth</label>
+<input type="text" [(ngModel)]="name" class="form-control" style="width: 20%;" placeholder="Enter Name"><br>
+<input type="text" [(ngModel)]="address" class="form-control" style="width: 20%;" placeholder="Enter Address"><br>
+<input type="tel" [(ngModel)]="mobile" class="form-control" style="width: 20%;" placeholder="Enter Mobile"><br>
+<button (click)="submit()" class="btn btn-primary">Save to List</button>&nbsp;
+
+<div *ngFor="let data of dataList">
+  <div>{{data.name}}</div>
+  <div>{{data.address}}</div>
+  <div>{{data.mobile}}</div>
+  <div>----------------------</div>
+</div>
+<button (click)="sendData()" class="btn btn-primary">Send Data to Fifth</button>&nbsp;
+<button (click)="clearList()" class="btn btn-primary">Clear Data</button>
+
+
+</body>
+
+

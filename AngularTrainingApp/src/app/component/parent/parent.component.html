@@ -1,0 +1,14 @@
+<body style="font-family: 'Segoe UI Semibold'">
+<h3>Parent Component</h3>
+
+<label>Data From Parent</label>
+<input type="text" [(ngModel)]="data" class="form-control" style="width: 20%;">
+<button (click)="sendData()" class="btn btn-primary">Submit Data to Child</button>
+
+
+
+<app-child [dataFromParent]="dataForChild" (eventEmitter)="dataFromChild($event)"></app-child>
+<app-third></app-third>
+<app-fourth></app-fourth>
+</body>
+

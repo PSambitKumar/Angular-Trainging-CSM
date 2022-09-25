@@ -1,0 +1,11 @@
+<body>
+<h3>Fifth Component</h3>
+<div *ngFor="let data of dataFromSixth">
+  <div>{{data.name}}</div>
+  <div>{{data.address}}</div>
+  <div>{{data.mobile}}</div>
+  <div>------------------</div>
+</div>
+</body>
+<app-sixth (eventEmitter)="dataFromChild($event)"></app-sixth>
+

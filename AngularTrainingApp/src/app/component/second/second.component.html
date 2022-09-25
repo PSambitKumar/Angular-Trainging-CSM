@@ -1,0 +1,68 @@
+<h3>Second Component</h3>
+<div [ngSwitch]="color">
+  <span *ngSwitchCase="'red'">You Have Chosen {{color}}</span>
+  <span *ngSwichCase="'green'">You Have Chosen {{color}}</span>
+  <span *ngSwichCase="'blue'">You Have Chosen {{color}}</span>
+  <span *ngSwichCase="'yellow'">You Have Chosen {{color}}</span>
+  <span *ngSwitchDefault>Choose a Color</span>
+</div>
+
+<button class="btn btn-danger" (click)="changeTheColor('red')">Red</button>
+<button class="btn btn-success" (click)="changeTheColor('green')">Green</button>
+<button class="btn btn-primary" (click)="changeTheColor('blue')">Blue</button>
+<button class="btn btn-warning" (click)="changeTheColor('yellow')">Yellow</button>
+
+<div style="font-family: 'Segoe UI Semibold'">
+  <select (change)="changeGeneder($event)" class="form-select">
+    <option>all</option>
+    <option>male</option>
+    <option>female</option>
+  </select>
+
+  <div *ngIf="gender == 'all'">
+    <div *ngFor="let employee of employeeList">
+        <div style="color: green; font-size: 20px;">{{employee.name}}</div>
+        <div>{{employee.age}}</div>
+        <div>{{employee.gender}}</div>
+        <div>{{employee.mobile}}</div>
+        <div *ngFor="let ra of employee.RA">
+          <span>{{ra.id}}. </span>
+          <span>{{ra.raOf}}</span>
+        </div><br>
+    </div>
+  </div>
+
+  <div *ngIf="gender == 'male'">
+    <div *ngFor="let employee of employeeList">
+      <ng-container *ngIf="employee.gender == gender">
+        <div style="color: green; font-size: 20px;">{{employee.name}}</div>
+        <div>{{employee.age}}</div>
+        <div>{{employee.gender}}</div>
+        <div>{{employee.mobile}}</div>
+        <div *ngFor="let ra of employee.RA">
+          <span>{{ra.id}}. </span>
+          <span>{{ra.raOf}}</span>
+        </div>
+      </ng-container><br>
+    </div>
+  </div>
+
+  <div *ngIf="gender == 'female'">
+    <div *ngFor="let employee of employeeList">
+      <ng-container *ngIf="employee.gender == gender">
+        <div style="color: green; font-size: 20px;">{{employee.name}}</div>
+        <div>{{employee.age}}</div>
+        <div>{{employee.gender}}</div>
+        <div>{{employee.mobile}}</div>
+        <div *ngFor="let ra of employee.RA">
+          <span>{{ra.id}}. </span>
+          <span>{{ra.raOf}}</span>
+        </div>
+      </ng-container><br>
+    </div>
+  </div>
+
+
+
+
+</div>
