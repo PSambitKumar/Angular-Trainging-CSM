@@ -23,6 +23,7 @@ import { EmployeeDetailsComponent } from './component/employee-details/employee-
 import { DepartmentDataComponent } from './component/department-data/department-data.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ReactiveFormComponent } from './component/reactive-form/reactive-form.component';
+import { CrudComponent } from './component/crud/crud.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ReactiveFormComponent } from './component/reactive-form/reactive-form.c
     EmployeeDetailsComponent,
     DepartmentDataComponent,
     ReactiveFormComponent,
+    CrudComponent,
   ],
   imports: [
     BrowserModule,

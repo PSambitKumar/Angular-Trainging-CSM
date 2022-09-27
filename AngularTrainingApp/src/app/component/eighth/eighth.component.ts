@@ -15,7 +15,7 @@ export class EighthComponent implements OnInit {
   ngOnInit(): void {
   }
   submit(){
-    this.mainService.sendDataToServer(this.name, this.mobile, this.address, "insertData").subscribe(data => {
+    this.mainService.sendDataToServer(this.name, this.mobile, this.address, "insertData").subscribe((data) => {
       console.log(data);
       if (data.status == 200){
         alert(data.message);

@@ -9,10 +9,12 @@ import {StudentListComponent} from "./component/student-list/student-list.compon
 import {DepartmentDataComponent} from "./component/department-data/department-data.component";
 import {EighthComponent} from "./component/eighth/eighth.component";
 import {ReactiveFormComponent} from "./component/reactive-form/reactive-form.component";
+import {CrudComponent} from "./component/crud/crud.component";
 
 const routes: Routes = [
   {path : "", redirectTo : "login", pathMatch : "full"},
   {path : "login", component : LoginComponent},
+  {path : "crud", component : CrudComponent},
   {path : "reactiveForm", component : ReactiveFormComponent},
   {path : "eight", component : EighthComponent},
   {path : "seventh", component : SeventhComponent, children : [
